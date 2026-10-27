@@ -4,7 +4,7 @@ valg2 = ""
 valg3 = ""
 
 def lesvalg(spørsmål):
-    
+
     svar = input(spørsmål).strip().upper()
     while svar not in("A","B"):
         print("Ugyldig valg. Vennligst velg A eller B.")
@@ -13,41 +13,93 @@ def lesvalg(spørsmål):
 
 
 print("Uke 6: teamet er i storming-fasen ...")
+print("Du er Erling, teamleder. Tre beslutninger avgjør hvordan det ender.")
+print()
 
 
+print("Beslutning 1: Silje og Elias")
+print("Sakskonflikten har blitt en personkonflikt.")
 print("A) individuelle samtaler   B) Plenum")
 valg1 = lesvalg("Velg A eller B: ")
 if valg1 == "A":
-    print("Temperaturen dempes ...")
-    poeng += 2
-    print()
-    print("Du setter opp to samtaler på tirsdag. Elias forklarer at han er")
-    print("redd for at prosjektet sprenger budsjettet og får hull i")
-    print("sikkerheten. Silje forteller at hun føler at ingen lytter til")
-    print("brukerne. Begge har gode poenger, og begge er lettet over å")
-    print("slippe å forsvare seg foran de andre.")
-    print()
-    print("Torsdag samler du dem. Sammen blir dere enige om kriterier for")
-    print("teknologivalget: sikkerhet, kostnad, brukervennlighet og")
-    print("fleksibilitet. Konflikten er ikke borte, men den handler nå om")
-    print("sak og ikke om person.")
+    print("Stemningen roer seg ...")
+    print("-> Felles arbeidsmøte om kriterier.")
+    poeng += 1
+
 else:
-    print("Åpen konflikt ...")
+    print("Møtet blir opphetet ...")
+    print("-> Flere i teamet tar side.")
+print()
+print("Beslutning 2: Hamdi og Hallgeir")
+print("Uenigheten om digitale folkemøter ulmer.")
+print("A) Avklaringsmøte nå   B) Avventer")
+valg2 = lesvalg("Velg A eller B: ")
+if valg2 == "A":
+    print("Uenigheten avklares tidlig ...")
+    print("-> En kombinert løsning testes.")
+    poeng += 1
 
-    print()
-    print("Du tar opp saken i plenum på fredagsmøtet. Først går samtalen")
-    print("rolig, men etter noen minutter hever Elias stemmen, og Silje")
-    print("svarer skarpt. Marcia og Hamdi blander seg inn, og snart er")
-    print("hele teamet delt i to leire.")
-    print()
-    print("Noa prøver å dempe stemningen, men uten hell. Møtet avsluttes")
-    print("tidlig, og ingen er enige om noe. Du har mistet litt av rollen")
-    print("som nøytral leder, og begge sider ser nå på deg for å se hvem")
-    print("du holder med.")
+else:
+    print("Misnøyen vokser ...")
+    print("-> Åpen kritikk på workshop.")
+print()
+print("Beslutning 3: Motivasjon og fremdrift")
+print("Tre uker igjen til prototypen.")
+if valg1 == "A" and valg2 == "A":
+    print("A) Relasjonsbygging   B) Fullt fokus på leveranse")
+    valg3 = lesvalg("Velg A eller B: ")
+    if valg3 == "A":
+        print("Tilliten bygges opp igjen ...")
+        print("-> Bedre samarbeidsklima.")
+        poeng += 1
+    else:
+        print("Prototypen går i rute, men det blir mer stress ...")
+        print("-> Fare for utbrenthet.")
+elif valg1 == "B" and valg2 == "B":
+    print("A) Relasjonsbygging   B) Fullt fokus på leveranse")
+    valg3 = lesvalg("Velg A eller B: ")
+    if valg3 == "A":
+        print("Tilliten bygges opp igjen ...")
+        print("-> Bedre samarbeidsklima.")
+        poeng += 1
+    else:
+        print("Prototypen går i rute, men det blir mer stress ...")
+        print("-> Fare for utbrenthet.")
+elif valg1 == "A" and valg2 == "B":
+    print("A) Relasjonsbygging   B) Fullt fokus på leveranse")
+    valg3 = lesvalg("Velg A eller B: ")
+    if valg3 == "A":
+        print("Tilliten bygges opp igjen ...")
+        print("-> Bedre samarbeidsklima.")
+        poeng += 1
+    else:
+        print("Prototypen går i rute, men det blir mer stress ...")
+        print("-> Fare for utbrenthet.")
+elif valg1 == "B" and valg2 == "A":
+    print("A) Relasjonsbygging   B) Fullt fokus på leveranse")
+    valg3 = lesvalg("Velg A eller B: ")
+    if valg3 == "A":
+        print("Tilliten bygges opp igjen ...")
+        print("-> Bedre samarbeidsklima.")
+        poeng += 1
+    else:
+        print("Prototypen går i rute, men det blir mer stress ...")
+        print("-> Fare for utbrenthet.")
 
+print()
+print("Resultat: summen av tillitspoeng avgjør hvilken slutt teamet får.")
+if poeng == 3:
+    print("Utfall 1: 3 poeng")
+    print("Tillit gjenopprettet -> teamet går inn i norming-fasen.")
+elif poeng >= 1:
+    print("Utfall 2: 1-2 poeng")
+    print("Delvis løst, men relasjonene er sårbare.")
+else:
+    print("Utfall 3: 0 poeng")
+    print("Teamet mister samholdet -> prosjektet forsinkes.")
 
-
-print(f"Din poengsum: {poeng} av 4")
+print()
+print(f"Din poengsum: {poeng} av 3")
 print("Valgene dine:", valg1, valg2, valg3)
 print()
 print("Takk for at du spilte!")
