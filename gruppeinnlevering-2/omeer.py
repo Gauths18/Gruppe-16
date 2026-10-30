@@ -1,5 +1,5 @@
 
-# omeer.py - Gruppeinnlevering 2, IS-118
+# omeer.py, IS-118
 # Interaktiv historie: Erling må lede teamet gjennom storming-fasen.
 # Spilleren tar tre valg. Tillitsbyggende valg gir 1 poeng.
 # Summen av poengene (0-3) avgjør hvilket av tre utfall historien ender i.
